@@ -1,0 +1,59 @@
+services:
+  - type: web
+    name: EliteXprotectorBot
+    runtime: node
+    buildCommand: npm install
+    startCommand: node src/main.js
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: MONGO_DB_NAME
+        value: elitex_protector
+      - key: LOG_LEVEL
+        value: INFO
+      - key: OWNER_USER_ID
+        sync: false
+      - key: OWNER_USERNAME
+        value: EliteSid
+      - key: ADMIN_REVIEW_CHAT_ID
+        sync: false
+      - key: PAYMENT_QR_IMAGE_URL
+        value: https://files.catbox.moe/0svb7x.jpg
+      - key: BOT_MESSAGE_DELETE_DELAY_SECONDS
+        value: "35"
+      - key: PROTECTED_GROUP_CACHE_REFRESH_SECONDS
+        value: "20"
+      - key: AUTO_DELETE_TICK_INTERVAL_MS
+        value: "200"
+      - key: AUTO_DELETE_CHUNK_SIZE
+        value: "100"
+      - key: AUTO_DELETE_RETRY_ATTEMPTS
+        value: "5"
+      - key: AUTO_DELETE_RETRY_BASE_SECONDS
+        value: "1.5"
+      - key: AUTO_DELETE_RETRY_MAX_SECONDS
+        value: "35"
+      - key: AUTO_DELETE_WORKER_CONCURRENCY
+        value: "12"
+      - key: AUTO_DELETE_METRICS_LOG_INTERVAL_SECONDS
+        value: "60"
+      - key: AUTO_DELETE_PERSISTENCE_ENABLED
+        value: "false"
+      - key: OBSERVER_ENABLED
+        value: "false"
+      - key: BOT_RUN_MODE
+        value: webhook
+      - key: WEBHOOK_MODE
+        value: "true"
+      - key: WEBHOOK_BASE_URL
+        sync: false
+      - key: WEBHOOK_PATH
+        value: /webhook/telegram
+      - key: WEBHOOK_SECRET_TOKEN
+        generateValue: true
+      - key: WEB_SERVER_HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: "10000"
