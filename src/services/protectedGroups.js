@@ -104,7 +104,7 @@ async function listActiveGroupsByOwner(ownerUserId, limit = 5) {
 
 module.exports = {
   parseGroupChatId,
-  ensureIndexes: ensureIndexes,
+  ensureGroupIndexes: ensureIndexes,   // ← fixed export name
   bindProtectedGroup,
   revokeProtectedGroup,
   getActiveProtectedGroup,
