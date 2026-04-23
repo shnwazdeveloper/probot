@@ -14,8 +14,8 @@ const {
   startGroupCache,
   stopGroupCache,
 } = require('./services/groupCache');
-const { ensureIndexes: ensurePaymentIndexes } = require('./services/paymentRequests');
-const { ensureIndexes: ensureGroupIndexes } = require('./services/protectedGroups');
+const { ensurePaymentIndexes } = require('./services/paymentRequests');
+const { ensureGroupIndexes } = require('./services/protectedGroups');
 
 const { registerStartHandlers } = require('./handlers/start');
 const { registerOwnerHandlers } = require('./handlers/ownerCommands');
