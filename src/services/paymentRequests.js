@@ -96,6 +96,7 @@ async function updatePaymentStatus(paymentId, status) {
 
 module.exports = {
   isValidPaymentId,
+  ensurePaymentIndexes: ensureIndexes,   // ← fixed export name
   createPendingPaymentRequest,
   listPendingPaymentRequests,
   countPendingPaymentRequests,
